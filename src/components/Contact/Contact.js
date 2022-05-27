@@ -14,8 +14,8 @@ const Contact = () => {
                             <Form.Control type="email" placeholder="Enter email" />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <textarea name="" id="" cols="20" rows="10" className='w-100 border-0 rounded' placeholder='Type your message here....'></textarea>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Control as="textarea" rows={3} />
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Send

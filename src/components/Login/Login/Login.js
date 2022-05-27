@@ -41,7 +41,7 @@ const Login = () => {
     }
 
     return (
-        <div className='container w-25 mx-auto text-center'>
+        <div className='container w-50 mx-auto text-center'>
             <h2 className='mt-5 mb-4 text-uppercase'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -53,11 +53,11 @@ const Login = () => {
                 </Form.Group>
                 <p className='text-danger'>{error ? 'Email or Passwrod Incorrect' : ''}</p>
                 <div className='main_div'>
-                    <Button variant="dark w-100 mb-5 fw-bold" type="submit">
+                    <Button variant="primary w-100 mb-5 fw-bold" type="submit">
                         Login
                     </Button>
                 </div>
-                <p>New to NFS Photography? <Link to='/register' className='text-primary text-decoration-none'>Register</Link></p>
+                <p>Don't have an account? <Link to='/register' className='text-primary text-decoration-none'>Register</Link></p>
                 <p>Forget your password?<Button variant='link text-decoration-none'>Reset</Button></p>
             </Form>
             <SocialLogin></SocialLogin>

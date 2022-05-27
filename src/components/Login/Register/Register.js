@@ -32,7 +32,6 @@ const Register = () => {
         let password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        console.log('Updated profile');
         navigate('/home');
     }
 
@@ -41,7 +40,7 @@ const Register = () => {
     }
 
     return (
-        <div className='container w-25 mx-auto text-center'>
+        <div className='container w-50 mx-auto text-center'>
             <h2 className='mt-5 mb-4 text-uppercase'>Please Register</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
@@ -54,9 +53,10 @@ const Register = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Button variant="dark w-100 mb-5 fw-bold" type="submit">
+                <Button variant="primary w-100 mb-5 fw-bold" type="submit">
                     Register
                 </Button>
+                <p className='text-danger'>{error ? 'Please insert valid value' : ''}</p>
                 <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>Login</Link></p>
                 <SocialLogin></SocialLogin>
             </Form>

@@ -13,7 +13,7 @@ const Item = ({ product }) => {
             <Card.Img variant="top" className='img-fluid' src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
-                <small>{description}</small><br /><br />
+                <small>{description.substring(0, 250)}.....</small><br /><br />
                 <small><b>Price:</b> {price}BDT</small><br />
                 <small><b>Quantity:</b> {quantity}</small><br />
                 <small><b>Supplier Name:</b> {supplier}</small>
