@@ -13,7 +13,7 @@ const Item = ({ product }) => {
                 <small><b>Quantity:</b> {quantity}</small><br />
                 <small><b>Supplier Name:</b> {supplier}</small>
             </Card.Body>
-            <Button>Stock Update</Button>
+            <Button className='m-3'>Stock Update</Button>
         </Card>
     );
 };

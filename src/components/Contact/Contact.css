@@ -1,0 +1,4 @@
+textarea::placeholder {
+    padding-left: 10px;
+    padding-top: 5px;
+}
