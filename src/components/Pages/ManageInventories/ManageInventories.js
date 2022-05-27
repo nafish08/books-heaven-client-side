@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Item from '../../Item/Item';
 import './ManageInventories.css';
 
@@ -20,7 +21,7 @@ const ManageInventories = () => {
                     ></Item>)
                 }
             </div>
-            <button>Add new item</button>
+            <Link className='text-decoration-none' to={'/addInventoryItem'}><button className='btn link_button d-block mx-auto mt-5'>Add new item</button></Link>
         </div>
     );
 };
