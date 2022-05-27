@@ -10,6 +10,7 @@ import Home from './components/Pages/Home/Home';
 import LogedInFeatures from './components/Pages/LogedInFeatures/LogedInFeatures';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
+import NotFound from './components/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <LogedInFeatures></LogedInFeatures>
           </RequireAuth>
         }></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
