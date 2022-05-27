@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Item from '../Item/Item';
+import Item from '../../Item/Item';
+import './ManageInventories.css';
 
-const Items = () => {
+const ManageInventories = () => {
     const [products, setProducts] = useState([]);
-    const firstProducts = products.slice(0, 6);
     useEffect(() => {
         fetch('http://localhost:5000/product')
             .then(res => res.json())
@@ -14,14 +14,15 @@ const Items = () => {
             <h1 className='text-center my-4'>Inventory Items</h1>
             <div className='row g-3'>
                 {
-                    firstProducts.map(product => <Item
+                    products.map(product => <Item
                         key={product._id}
                         product={product}
                     ></Item>)
                 }
             </div>
+            <button>Add new item</button>
         </div>
     );
 };
 
-export default Items;
+export default ManageInventories;

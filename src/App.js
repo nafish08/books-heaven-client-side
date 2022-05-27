@@ -8,6 +8,7 @@ import Register from './components/Login/Register/Register';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import Home from './components/Pages/Home/Home';
 import LogedInFeatures from './components/Pages/LogedInFeatures/LogedInFeatures';
+import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import NotFound from './components/Shared/NotFound/NotFound';
@@ -19,6 +20,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/manageInventories' element={
+          <RequireAuth>
+            <ManageInventories></ManageInventories>
+          </RequireAuth>
+        }>
+        </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/item/:itemId' element={
           <RequireAuth>

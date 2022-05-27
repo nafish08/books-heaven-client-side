@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const DeliveredItem = ({ product }) => {
     const [total, setTotal] = useState(product.quantity);
@@ -17,10 +18,10 @@ const DeliveredItem = ({ product }) => {
     }
 
     return (
-        <div className='container'>
-            <div className='d-flex align-items-center justify-content-center'>
-                <img className='img-fluid' src={img} alt='' />
-                <div>
+        <div className='container mt-4'>
+            <div className='row'>
+                <img className='img-fluid col-6 w-25' src={img} alt='' />
+                <div className='col-6'>
                     <Card.Title>{name}</Card.Title>
                     <small>{description}</small><br /><br />
                     <small><b>Price:</b> {price}BDT</small><br />
@@ -40,6 +41,7 @@ const DeliveredItem = ({ product }) => {
                     </Button>
                 </Form>
             </div>
+            <Link to={'/manageInventories'} className='btn w-25 link_button d-block mx-auto mt-5'>Manage Inventories</Link>
         </div>
     );
 };
