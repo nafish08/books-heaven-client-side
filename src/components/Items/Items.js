@@ -10,7 +10,7 @@ const Items = () => {
     }, [])
     return (
         <div className='container'>
-            <h2>Inventory Items</h2>
+            <h1 className='text-center my-4'>Inventory Items</h1>
             <div className='row g-3'>
                 {
                     products.map(product => <Item
