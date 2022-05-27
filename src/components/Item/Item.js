@@ -10,7 +10,7 @@ const Item = ({ product }) => {
     }
     return (
         <Card className='col-lg-4 col-md-4 col-12'>
-            <Card.Img variant="top" className='img-fluid' src={img} />
+            <Card.Img variant="top" className='w-75 mx-auto pt-4' src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <small>{description.substring(0, 250)}.....</small><br /><br />

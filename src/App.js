@@ -1,15 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
-import Item from './components/Item/Item';
 import ItemDetails from './components/Login/ItemDetails/ItemDetails';
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import AddInventoryItem from './components/Pages/AddInventoryItem/AddInventoryItem';
 import Home from './components/Pages/Home/Home';
-import LogedInFeatures from './components/Pages/LogedInFeatures/LogedInFeatures';
 import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
+import MyItems from './components/Pages/MyItems/MyItems';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import NotFound from './components/Shared/NotFound/NotFound';
@@ -33,6 +32,24 @@ function App() {
           </RequireAuth>
         }>
         </Route>
+        <Route path='/manageItems' element={
+          <RequireAuth>
+            <ManageInventories></ManageInventories>
+          </RequireAuth>
+        }>
+        </Route>
+        <Route path='/myItems' element={
+          <RequireAuth>
+            <MyItems></MyItems>
+          </RequireAuth>
+        }>
+        </Route>
+        <Route path='/addItems' element={
+          <RequireAuth>
+            <AddInventoryItem></AddInventoryItem>
+          </RequireAuth>
+        }>
+        </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/item/:itemId' element={
           <RequireAuth>
@@ -42,11 +59,6 @@ function App() {
         </Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/itemdetails' element={
-          <RequireAuth>
-            <LogedInFeatures></LogedInFeatures>
-          </RequireAuth>
-        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

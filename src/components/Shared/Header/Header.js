@@ -18,7 +18,7 @@ const Header = () => {
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to='/home'>Home</Nav.Link>
                         {
-                            user ? <Nav.Link as={Link} to='/mangeItems'>Manage Items</Nav.Link>
+                            user ? <Nav.Link as={Link} to='/manageItems'>Manage Items</Nav.Link>
                                 : ''
                         }
                         {

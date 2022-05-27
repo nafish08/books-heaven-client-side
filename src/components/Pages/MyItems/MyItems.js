@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Item from '../../Item/Item';
-import './ManageInventories.css';
 
-const ManageInventories = () => {
+const MyItems = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/product')
@@ -12,7 +10,7 @@ const ManageInventories = () => {
     }, [])
     return (
         <div className='container'>
-            <h1 className='text-center my-4'>MANAGE INVENTORY</h1>
+            <h1 className='text-center my-4'>MY ITEMS</h1>
             <div className='row g-3'>
                 {
                     products.map(product => <Item
@@ -21,9 +19,8 @@ const ManageInventories = () => {
                     ></Item>)
                 }
             </div>
-            <Link className='text-decoration-none' to={'/addInventoryItem'}><button className='btn link_button d-block mx-auto mt-5'>Add new item</button></Link>
         </div>
     );
 };
 
-export default ManageInventories;
+export default MyItems;
