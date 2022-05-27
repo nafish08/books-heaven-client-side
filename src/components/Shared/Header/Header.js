@@ -17,7 +17,18 @@ const Header = () => {
                     <Navbar.Brand as={Link} to='/home'>Books Heaven</Navbar.Brand>
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-                        <Nav.Link href="#about">About</Nav.Link>
+                        {
+                            user ? <Nav.Link as={Link} to='/mangeItems'>Manage Items</Nav.Link>
+                                : ''
+                        }
+                        {
+                            user ? <Nav.Link as={Link} to='/myItems'>My Items</Nav.Link>
+                                : ''
+                        }
+                        {
+                            user ? <Nav.Link as={Link} to='/addItems'>Add Items</Nav.Link>
+                                : ''
+                        }
                         <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
                     </Nav>
 
