@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blogs from './components/Blogs/Blogs';
 import Item from './components/Item/Item';
 import ItemDetails from './components/Login/ItemDetails/ItemDetails';
 import Login from './components/Login/Login/Login';
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/item/:itemId' element={
           <RequireAuth>
             <ItemDetails></ItemDetails>
