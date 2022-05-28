@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Item from '../../Item/Item';
+import useItem from '../../Shared/hooks/useItem';
 import DeliveredItem from '../DeliveredItem/DeliveredItem';
 
 const ItemDetails = () => {
+    // useParams returns an object of key/value pairs of URL parameters
     const { itemId } = useParams();
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/product')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    // using custom hook here
+    const [products, setProducts] = useItem();
 
+    // Filtering specific item using _id
     const updateItem = products.filter(u => u._id === itemId)
+
     return (
         <div>
             {
