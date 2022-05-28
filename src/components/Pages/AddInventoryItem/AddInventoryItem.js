@@ -21,7 +21,7 @@ const AddInventoryItem = () => {
             supplier: event.target.supplier.value,
             img: event.target.img.value,
         }
-        axios.post('http://localhost:5000/addNewItem', newItem)
+        axios.post('https://boiling-shore-92900.herokuapp.com/addNewItem', newItem)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {

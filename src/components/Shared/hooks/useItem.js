@@ -5,7 +5,7 @@ const useItem = () => {
     const [products, setProducts] = useState([]);
     // loading data from api
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://boiling-shore-92900.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);

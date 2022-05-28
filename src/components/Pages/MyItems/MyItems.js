@@ -12,7 +12,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/addNewItem?email=${email}`;
+            const url = `https://boiling-shore-92900.herokuapp.com/addNewItem?email=${email}`;
             const { data } = await axios.get(url);
             setItems(data);
         }
