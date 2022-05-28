@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    // for handling sign out
     const handleSignOut = () => {
         signOut(auth);
     }
@@ -19,6 +20,7 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
                             <Nav.Link as={Link} to='/home'>Home</Nav.Link>
+                            {/* This options will only appear for logged in users */}
                             {
                                 user ? <Nav.Link as={Link} to='/manageItems'>Manage Items</Nav.Link>
                                     : ''
@@ -35,6 +37,7 @@ const Header = () => {
                         </Nav>
 
                         <Nav>
+                            {/* This option will only appear for logged in users */}
                             {
                                 user ? <button onClick={handleSignOut} className='btn btn-link text-decoration-none'>Logout</button>
                                     :

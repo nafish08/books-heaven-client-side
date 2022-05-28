@@ -7,12 +7,14 @@ import Loading from '../../Shared/Loading/Loading';
 import './SocialLogin.css';
 
 const SocialLogin = () => {
+    // using react firebase hooks here for google authentication
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
     let errorElement;
 
+    // spinner appears when loading 
     if (loading) {
         return <Loading></Loading>;
     }
@@ -21,6 +23,7 @@ const SocialLogin = () => {
         errorElement =
             <p className='text-danger'>Error: {error?.message}</p>
     }
+
 
     if (user) {
         navigate(from, { replace: true });

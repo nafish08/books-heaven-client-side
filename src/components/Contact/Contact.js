@@ -5,7 +5,7 @@ import './Contact.css';
 const Contact = () => {
     return (
         <div className='container bg-dark py-5 mt-5 rounded'>
-            <h1 className='text-center text-light my-4'>Contact Us</h1>
+            <h1 className='text-center text-light mb-4'>Contact Us</h1>
             <div className='row'>
                 <img src="https://i.ibb.co/37RYPDY/hot-line-contact-us-call-center-search-interface.jpg" className='img-fluid rounded col-6' alt="" />
                 <div className='col-6'>

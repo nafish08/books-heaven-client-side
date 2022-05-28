@@ -7,6 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+    // storing input field value using useRef hook
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
@@ -19,12 +20,14 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+    // useNavigate for navigation
     const navigate = useNavigate();
 
     const navigateLogin = () => {
         navigate('/login');
     }
 
+    // For handling form register
     const handleRegister = async (event) => {
         event.preventDefault();
         let name = nameRef.current.value;
@@ -35,6 +38,7 @@ const Register = () => {
         navigate('/home');
     }
 
+    // spinner appears when loading 
     if (loading) {
         return <Loading></Loading>;
     }
@@ -56,7 +60,9 @@ const Register = () => {
                 <Button variant="primary w-100 mb-5 fw-bold" type="submit">
                     Register
                 </Button>
+                {/* Conditional chaining added here */}
                 <p className='text-danger'>{error ? 'Please insert valid value' : ''}</p>
+                {/* On click navigate to /login */}
                 <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>Login</Link></p>
                 <SocialLogin></SocialLogin>
             </Form>
