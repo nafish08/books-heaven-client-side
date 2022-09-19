@@ -7,61 +7,27 @@ const Blogs = () => {
             <h1 className='text-center mb-4'>Q&A</h1>
             <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>1. Difference between javascript and nodejs</Accordion.Header>
+                    <Accordion.Header>1. Text1</Accordion.Header>
                     <Accordion.Body>
-                        <h4>JavaScript:</h4>
-                        <ul>
-                            <li>JavaScript is a lightweight object-oriented programming language for creating dynamic HTML pages with interactive effects.</li>
-                            <li>Versatile and quick.</li>
-                            <li>Cross-compilation is possible.</li>
-                            <li>Interfaces, modules, and classes are all supported.</li>
-                        </ul>
-                        <h4>Node.js</h4>
-                        <ul>
-                            <li>When launched in the V8 engine or via the node interpreter, Node.js normally provides a list of objects and methods available to JavaScript code.</li>
-                            <li>It's an open-source framework with an MIT license.</li>
-                            <li>It's a simple framework with only the most essential elements. Other modules may be added depending on the application's needs.</li>
-                            <li>It's a cross-platform framework for Windows, Mac OS X, and Linux.</li>
-                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed nibh at erat fermentum tincidunt eget non justo. Sed gravida nisi sed lorem porttitor iaculis eget non risus. Praesent tortor urna, ornare eu pellentesque non, venenatis in leo. Quisque a suscipit sem, a tincidunt erat. Nunc eleifend in magna et iaculis. Curabitur sollicitudin sapien neque, vel vestibulum neque vestibulum in. Duis convallis tristique pharetra. Quisque dignissim lacinia dolor, ut posuere nisi sollicitudin ac. Morbi vitae posuere massa. Morbi nisl erat, mollis sit amet hendrerit mollis, consectetur et metus. Praesent tempus interdum quam, vitae convallis sem efficitur sit amet.</p>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header>2. When should you use nodejs and when should you use mongodb</Accordion.Header>
+                    <Accordion.Header>2. Text2</Accordion.Header>
                     <Accordion.Body>
-                        <p>When building an API application with both relational and non-relational databases, Node.js is a wonderful choice. Because Node.js works on a single thread, it can handle up to 10,000 simultaneous queries. Internal threads handle all blocking I/O activities (such as database access) asynchronously, without disturbing the main thread. Node.js is the ideal choice for building microservices and real-time applications.</p>
-                        <p>MongoDB is a general-purpose database that is used in a variety of sectors to support applications. Because it tackles long-standing difficulties in data management and software development, MongoDB has found a home in a variety of enterprises and roles. MongoDB is commonly used in the following scenarios:</p>
-                        <ul>
-                            <li>Integrating large amounts of diverse data</li>
-                            <li>Describing complex data structures that evolve</li>
-                            <li>Delivering data in high-performance applications</li>
-                            <li>Supporting hybrid and multi-cloud applications</li>
-                        </ul>
+                        <p>Pellentesque non nulla id nisl mollis suscipit ut ac urna. Nulla eget ultrices eros. Integer felis diam, sollicitudin vel vehicula quis, sagittis et augue. Integer finibus, arcu at congue lacinia, diam est aliquam lectus, vel egestas ante magna a elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque molestie velit diam, eu lobortis sem facilisis quis. Proin aliquam ipsum lectus, a euismod turpis viverra et. Sed sollicitudin nisi elit, eu vestibulum velit lobortis ultrices. Curabitur vitae ipsum laoreet, aliquet erat eget, blandit orci. Sed porttitor nisi vitae nulla tristique, eget consequat erat suscipit. Duis dapibus non lectus in blandit.</p>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
-                    <Accordion.Header>3. Differences between sql and nosql databases.</Accordion.Header>
+                    <Accordion.Header>3. Text3</Accordion.Header>
                     <Accordion.Body>
-                        <h4>SQL:</h4>
-                        <ul>
-                            <li>It is a Relational Database Management System.</li>
-                            <li>Complex queries are best served by these databases.</li>
-                            <li>Vertically Scalable</li>
-                            <li>The schema of these databases is fixed, static, or predetermined.</li>
-                        </ul>
-                        <h4>NoSQL:</h4>
-                        <ul>
-                            <li>It is a Non-relational Database System.</li>
-                            <li>Complex queries are not well served by these databases.</li>
-                            <li>Horizontally scalable</li>
-                            <li>They have dynamic schema</li>
-                        </ul>
+                        <p>Vestibulum eu leo turpis. Aenean laoreet finibus hendrerit. Integer porttitor id nisl ut ullamcorper. Maecenas ut iaculis mi, a egestas urna. Fusce nec pulvinar sem, vitae scelerisque ante. Phasellus a pellentesque turpis. Fusce condimentum ultrices ligula. Nulla in dui porta, ullamcorper nisi porttitor, eleifend lectus. In et magna bibendum metus iaculis tincidunt non nec est. Integer fermentum orci id ligula venenatis, ac tempor massa pulvinar. Ut sapien turpis, elementum quis facilisis auctor, tempor sed mauris. Ut et quam nulla. Pellentesque non pretium eros, in dapibus sapien.</p>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
-                    <Accordion.Header>4. What is the purpose of jwt and how does it work</Accordion.Header>
+                    <Accordion.Header>4. Text4</Accordion.Header>
                     <Accordion.Body>
-                        <p>JWT is an open standard that allows two parties — a client and a server — to communicate security information. JSON items, containing a set of claims, are encoded in each JWT. JWTs use a cryptographic technique to ensure that the claims cannot be changed after the token has been issued.</p>
-                        <p>JWTs are unique among web tokens in that they include a set of claims. Claims are a way for two parties to exchange information. The nature of these assertions is determined by the use case at hand. A claim could state who issued the token, how long it's valid, or what rights the client has been given.</p>
+                        <p>Aliquam vel erat elementum, luctus arcu vitae, fermentum augue. Vivamus ut ex id lorem imperdiet vulputate. Duis imperdiet at erat eu ultricies. Aenean ornare finibus ipsum, et facilisis sapien. Nullam maximus condimentum augue quis tincidunt. Morbi cursus tristique lacinia. Morbi varius risus ut consequat efficitur. Suspendisse nec ligula bibendum, convallis elit a, finibus orci.</p>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
